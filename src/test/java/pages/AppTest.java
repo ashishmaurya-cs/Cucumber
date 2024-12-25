@@ -1,4 +1,4 @@
-package com.ashish.Cucumber;
+package pages;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

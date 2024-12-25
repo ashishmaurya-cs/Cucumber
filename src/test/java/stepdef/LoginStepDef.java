@@ -15,8 +15,6 @@ public class LoginStepDef {
 	@Given("user navigates to the login page by opening chrome")
 	public void launch() {
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\\\Users\\\\Ram Ashish Maurya\\\\Downloads\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://demo.guru99.com/test/login.html");
 		driver.manage().window().maximize();
@@ -30,7 +28,7 @@ public class LoginStepDef {
 		driver.findElement(By.id("SubmitLogin")).click();
 	}
 
-	@Then("^user is directed to the home page$")
+	@Then("user is directed to the home page")
 	public void validateURL() {
 		Assert.assertEquals("https://demo.guru99.com/test/success.html", driver.getCurrentUrl());
 		driver.close();
