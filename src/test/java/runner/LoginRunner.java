@@ -1,10 +1,9 @@
 package runner;
 
-import org.junit.runner.RunWith;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-@RunWith(io.cucumber.junit.Cucumber.class)
-@CucumberOptions(features = "src/main/resources/feature", glue = { "/stepdef" })
-public class LoginRunner {
+//@RunWith
+@io.cucumber.testng.CucumberOptions(features = "src/main/resources/feature", glue = { "/stepdef" })
+public class LoginRunner extends AbstractTestNGCucumberTests{
 
 }
